@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.tpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalleon <aalleon@student.42.fr>            +#+  +:+       +#+        */
+/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 13:52:57 by aalleon           #+#    #+#             */
-/*   Updated: 2022/10/06 14:14:12 by aalleon          ###   ########.fr       */
+/*   Updated: 2022/10/27 11:39:15 by antoine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,16 @@ Array<T>&	Array<T>::operator=(const Array& rhs)
 
 //	Indexing operator []
 template<typename T>
-T&	Array<T>::operator[](int i) const
+T&	Array<T>::operator[](int i)
+{
+	if (i < 0 || static_cast<unsigned int>(i) >= _size)
+		throw (std::exception());
+	return (_array[i]);
+}
+
+//	Indexing operator [] const
+template<typename T>
+const T&	Array<T>::operator[](int i) const
 {
 	if (i < 0 || static_cast<unsigned int>(i) >= _size)
 		throw (std::exception());

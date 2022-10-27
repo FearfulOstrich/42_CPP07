@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalleon <aalleon@student.42.fr>            +#+  +:+       +#+        */
+/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:47:38 by aalleon           #+#    #+#             */
-/*   Updated: 2022/10/06 14:12:03 by aalleon          ###   ########.fr       */
+/*   Updated: 2022/10/27 11:38:45 by antoine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ public:
 	//		Assignment operator
 	Array&	operator=(const Array& rhs);
 	//		Indexing operator []
-	T&	operator[](int i) const;
+	T&			operator[](int i);
+	const T&	operator[](int i) const;
 
 	// Member functions
 	//		size()
